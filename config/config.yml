@@ -1,0 +1,10 @@
+redis:
+  host: localhost
+  port: 6379
+  db: 3
+
+flood-control:
+  maxNumberOfRequests: 3  #Количество requests, после которого происходит блокирование доступа к БД
+  floodControlTTL: 40s    #Время за которое не должен быть превышен предел
+  retryInterval: 1s       #Время через которое делается повторное обращение к БД
+  maxNumberOfRetries: 10  #Максимальное количество повторных запросов к БД
